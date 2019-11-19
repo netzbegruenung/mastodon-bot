@@ -19,6 +19,15 @@ If you get a [permission failure](https://github.com/anmonteiro/lumo/issues/206)
 
 ### usage
 
+#### Docker synopsis
+
+    docker run --rm -ti \
+        -v $(pwd):/config \
+        --env MASTODON_BOT_CONFIG=/config/my_config.edn \
+        quay.io/netzbegruenung/mastodon-bot
+
+#### long form
+
 * create a Mastodon API key following the instructions [here](https://tinysubversions.com/notes/mastodon-bot/)
 * create a Twitter API key follwing the instructions [here](https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens)
 * create a Tumblr API key following the instructions [here](http://www.developerdrive.com/2014/05/how-to-get-started-with-the-tumblr-api-part-1/)
