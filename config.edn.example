@@ -1,0 +1,55 @@
+{
+      ;; add Twitter config to mirror Twitter accounts
+      :twitter {
+            :access-keys {
+                  :consumer_key "XXXX"
+                  :consumer_secret "XXXX"
+                  :access_token_key "XXXX"
+                  :access_token_secret "XXXX"
+            }
+            ;; optional, defaults to false
+            :include-replies? false
+            ;; optional, defaults to false
+            :include-rts? false
+            ;; accounts you wish to mirror
+            :accounts ["arstechnica" "WIRED"]
+      }
+
+      ;; add RSS config to follow feeds
+      :rss {
+            "Hacker News" "https://hnrss.org/newest"
+            "r/Clojure" "https://www.reddit.com/r/clojure/.rss"
+      }
+      
+      :mastodon {
+            :access_token "XXXX"
+            ;; account number you see when you log in and go to your profile
+            ;; e.g the "18846" in https://gruene.social/web/accounts/18846
+            :account-id "XXXX"
+            :api_url "https://gruene.social/api/v1/"
+            ;; optional boolean to mark content as sensitive
+            ;:sensitive? true
+            ;; optional boolean defaults to false
+            ;; only sources containing media will be posted when set to true
+            ;:media-only? true
+            ;; optional visibility flag: direct, private, unlisted, public
+            ;; defaults to public        
+            ;:visibility "unlisted"
+            ;; optional limit for the post length
+            ;:max-post-length 300
+            ;; optional flag specifying wether the name of the account
+            ;; will be appended in the post, defaults to false
+            ;:append-screen-name? false
+            ;; optional signature for posts
+            ;:signature "#newsbot"
+            ;; optionally try to resolve URLs in posts to skip URL shorteners
+            ;; defaults to false
+            :resolve-urls? true
+            ;; optional content filter regexes
+            ;; any posts matching the regexes will be filtered out
+            ;:content-filters [".*bannedsite.*"]
+            ;; optional keyword filter regexes
+            ;; any posts not matching the regexes will be filtered out
+            ;:keyword-filters [".*clojure.*"]
+      }
+}
